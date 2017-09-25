@@ -1,0 +1,8 @@
+# 忽略 build/ 目录下的所有文件
+/node_modules
+# 忽略 dist/ 目录下的所有文件
+/dist
+# 忽略所有.rar .zip 结尾的文件
+*.rar .zip
+# 忽略package-lock.json
+package-lock.json
