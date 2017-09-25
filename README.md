@@ -17,8 +17,14 @@
 The following commands are available in your project:
 ```bash
 # Start for development or Start the dev-server with the dist version
-npm run serve
+npm run dev
 
 # Just build the dist version and copy static files
-npm run dist
+npm run build
+
+# Mac Start
+npm run mac:dev
+
+# Mac build
+npm run mac:build
 ```

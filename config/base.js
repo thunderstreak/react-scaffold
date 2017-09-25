@@ -6,8 +6,8 @@ const CleanPlugin = require("clean-webpack-plugin");//清空文件夹
 const HtmlWebpackPlugin = require('html-webpack-plugin');// 引入html-webpack-plugin
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');//长效缓存
 
-const ManifestPlugin = require('webpack-manifest-plugin');
-const WebpackChunkHash = require('webpack-chunk-hash');
+// const ManifestPlugin = require('webpack-manifest-plugin');
+// const WebpackChunkHash = require('webpack-chunk-hash');
 
 const config = require('./config.js');
 const root = path.resolve(__dirname, '../');
@@ -77,19 +77,18 @@ module.exports = {
         }),*/
 
         new HtmlWebpackPlugin({
-
-                title    : 'React SPA应用',//标题名称
-                // favicon  : 'asset/favicon.ico', //favicon路径
-                hash     : true, //开启hash值验证
-                filename : 'index.html', //输出入口文件
-                template : path.resolve('src/template', 'index.html'), //模板文件路径
-                // chunks   : ['app', 'vendors', 'manifest'],//需要注入的文件块
-                inject   : true, //注入资源到template中(true|'head'|'body'|false)
-                cache    : false,
-                minify   : { //压缩HTML文件
-                	removeComments      : true, //移除HTML中的注释
-                	collapseWhitespace  : true //删除空白符与换行符
-                },
+            title    : 'React SPA应用',//标题名称
+            // favicon  : 'asset/favicon.ico', //favicon路径
+            hash     : true, //开启hash值验证
+            filename : 'index.html', //输出入口文件
+            template : path.resolve('src/template', 'index.html'), //模板文件路径
+            // chunks   : ['app', 'vendors', 'manifest'],//需要注入的文件块
+            inject   : true, //注入资源到template中(true|'head'|'body'|false)
+            cache    : false,
+            minify   : { //压缩HTML文件
+            	removeComments      : true, //移除HTML中的注释
+            	collapseWhitespace  : true //删除空白符与换行符
+            },
             // showErrors:true,//显示错误警告到页面上？？？
             // chunksSortMode: 'dependency',//必须通过上面的 CommonsChunkPlugin 的依赖关系自动添加 js，css 等
         }),
